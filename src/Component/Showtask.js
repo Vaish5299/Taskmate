@@ -3,24 +3,24 @@ import React, { useState } from 'react';
 const Showtask = (props) => {
   const [editText, setEditText] = useState('');
   const [editIndex, setEditIndex] = useState(null);
-
+  //When user clicks on "Delete" button, sent the index to parent component(tasks.index);
   function delFn(index) {
     props.del(index);
   }
-
+  //when user clicks on "Clear All" button, all the tasks needs to cleared (code swriiten in parent component and passing here through call back function)
   function clearAll() {
     props.clear();
   }
-
+  //Edit button functionality
   function editFn(index, text) {
     setEditIndex(index);
     setEditText(text);
   }
-
+  //When user clicks on edit, it task changes to the input field and and allow user to type.
   function handleChange(e) {
     setEditText(e.target.value);
   }
-
+  //Functioanlity to update the task by clicking on update button 
   function handleSubmit(index) {
     props.edit(index, editText);
     setEditIndex(null);

@@ -1,17 +1,17 @@
 
 import React from 'react';
-import Logo from  "../assets/taskmate_logo.jpg";
+import Logo from "../assets/taskmate_logo.jpg";
 
-function Header () {
- 
+function Header() {
+
 
   return (
     <header >
       <div className='logo'>
-      <img src={Logo} alt="taskmate logo"/>
-     <h3>Taskmate</h3>
+        <img src={Logo} alt="taskmate logo" />
+        <h3>Taskmate</h3>
       </div>
-      
+
     </header>
   )
 }
